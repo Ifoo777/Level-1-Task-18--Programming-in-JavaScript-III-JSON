@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body onload="myLoad()">
+    <div id="favBooks"></div>
+    <style>
+      .checked {
+        text-decoration: line-through;
+        color: red;
+      }
+    </style>
+
+    <!--Form for all the attributes are created here below-->
+    <form>
+      <label for="Author">Enter Author</label>
+      <input
+        type="text"
+        name="author"
+        id="author"
+        contenteditable="true"
+        required
+      />
+
+      <input type="button" value="save my edits" onclick="saveEdits()" />
+
+      <label for="Title">Enter title</label>
+      <input
+        type="text"
+        name="title"
+        id="title"
+        contenteditable="true"
+        required
+      />
+      <input type="button" value="save my edits" onclick="saveEdits()" />
+
+      <label for="Genre">Enter Genre</label>
+      <input
+        type="text"
+        name="genre"
+        id="genre"
+        contenteditable="true"
+        required
+      />
+      <input type="button" value="save my edits" onclick="saveEdits()" />
+
+      <label for="Review">Enter Review</label>
+      <input
+        type="text"
+        name="reviews"
+        id="reviews"
+        contenteditable="true"
+        required
+      />
+
+      <!--save edit -->
+      <input type="button" value="save my edits" onclick="saveEdits()" />
+
+      <!--add book-->
+      <button type="button" onclick="addBook()">Create new book</button>
+    </form>
+
+    <!--choose book drop down-->
+    <select id="bookList" onchange="changeActiveBook(this.value)">
+      <option>--Please choose a book--</option>
+    </select>
+    <div id="tableContent"></div>
+
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
